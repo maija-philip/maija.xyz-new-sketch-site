@@ -7,6 +7,6 @@ export default function BackButton() {
     const navigate = useNavigate();
 
   return (
-    <button onClick={() => navigate(-1)}><ArrowBackIcon/></button>
+    <button onClick={() => navigate(-1)} className="page-button"><ArrowBackIcon fontSize="large" /></button>
   );
 }

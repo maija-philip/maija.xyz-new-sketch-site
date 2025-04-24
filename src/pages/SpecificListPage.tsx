@@ -1,5 +1,5 @@
 import * as React from "react";
-import BackButton from "../components/BackButton";
+import Page from "../components/Page";
 
 type PageType = "development" | "design" | "art";
 
@@ -9,10 +9,11 @@ interface SpecificListPageProps {
 
 export default function SpecificListPage({ pageType }: SpecificListPageProps) {
   return (
-    <div>
-      <h1>Specific List Page</h1>
-      <p>Type: {pageType}</p>
-      <BackButton/>
-    </div>
+    <Page hasBackButton={true}>
+      <div>
+        <h1>Specific List Page</h1>
+        <p>Type: {pageType}</p>
+      </div>
+    </Page>
   );
 }
