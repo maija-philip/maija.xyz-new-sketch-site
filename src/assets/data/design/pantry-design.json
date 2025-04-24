@@ -1,0 +1,12 @@
+{
+    "file-name": "pantry-design",
+    "title": "Pantry Flutter App Design",
+    "subtitle": "UI/UX Designer + Graphic Designer",
+    "image": "pantry-design",
+    "alt": "minimalistic food designs as well as recipe editing screen",
+    "links": [
+      { "title": "Pantry Development", "url": "/info/pantry" }
+    ],
+    "description": "2023 \n\nThis was a very open ended project for one of my classes, the only requirement is that it be built in Flutter. I decided to create a recipe app with custom cute icons that you could choose from. The icons were a really fun thing to design because before this, I hadn't had much experience with icons like this. I also was really into a Material Design scheme for the UI/UX."
+  }
+  

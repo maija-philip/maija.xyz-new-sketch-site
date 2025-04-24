@@ -1,0 +1,12 @@
+{
+    "file-name": "ischool",
+    "title": "School of Information Replica Website",
+    "subtitle": "Frontend Developer",
+    "image": "ischool",
+    "alt": "School of Information Replica Website, Utilizes React and APIs",
+    "links": [
+      { "title": "Github", "url": "https://github.com/maija-philip/UsingAPIdataInReact" }
+    ],
+    "description": "2023 \n\nIn my 2023 Client Programming class, one of our projects was to create a replica of our college's site. Our college is the School of Information, nicknamed as iSchool. Its website shows off the classes, majors, and minors that it offers as well as some details about employment and faculty. \n\nThis data was retrieved from an API as JSON data.I learned how to add dependencies and use the Semantic and MUI React libraries as well as creating custom components. I really enjoyed piecing the bits of React that I knew together into a complete project and learning how to publish a React site onto a domain. \n\nI learned a lot about the quirks of React as well as furthering my knowledge of how timing and callbacks in Javascript work. Javascript is still to this day (May 2024) one of my favorite programming languages."
+  }
+  

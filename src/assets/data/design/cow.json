@@ -1,0 +1,12 @@
+{
+    "file-name": "cow",
+    "title": "CRUD COWS",
+    "subtitle": "Graphic Designer + Full Stack Developer",
+    "image": "cow",
+    "alt": "two cows made out of capsule shapes, one brown and white and one red and white with yellow horns",
+    "links": [
+      { "title": "Project Github", "url": "https://github.com/maija-philip/ISTE444-Final" }
+    ],
+    "description": "2025 \n\nThese lovely cows are from a project in one of my classes my senior year of college. It was a simple project where we created a website that did basic CRUD operations with authentication. \n\nFor my part I designed and created the React.js website, created the REST API endpoints with Node.js and Express, as well as integrated authentication with Firebase's JS Library. \n\nThese cows were so much fun to design. They drew on some graphic design that I did in high school where I used a lot of capsule shapes to create my figures. I think it adds a cute touch and it helps me stay away from realism which is more common in my art. I wanted a simple but expandable pallette for these that could be used on the website and would pop on a white background and a darker one. I'm really happy with this and I totally love the evil cow which was a fun little add on to our project."
+  }
+  

@@ -1,0 +1,13 @@
+{
+    "file-name": "retire-plan",
+    "title": "RetirePlan App",
+    "subtitle": "Full Stack Developer",
+    "image": "retire-plan",
+    "alt": "RetirePlan React App, Learn how your choices affect your savings",
+    "links": [
+      { "title": "Apple App Store", "url": "https://apps.apple.com/us/app/retireplan/id435739013" },
+      { "title": "Google Play Store", "url": "https://play.google.com/store/apps/details?id=com.keltin.retireplan" }
+    ],
+    "description": "Summer 2023 Internship \n\nWant to plan out how different life choices affect your finances? RetirePlan allows you to play with data and different scenarios of life choices. You can visualize your data in a number of different graphs or a table if that suits you better. \n\nI worked on the revamp of this app, for my Summer of 2023 internship, as we migrated it from objective c to React Native. It was a great opportunity to learn the ins and outs of mobile development (and how long builds take, ugh!). I started the summer doing a redesign of the app to create an intuitive, responsive, accessible, and modern design. \n\nI followed that up with implementing 3/4 of the design, including a navigation scheme, as well as dynamically creating a complex interaction UI to collect user financial data. For our interactive graph, I iterated through a React Native Graphing library, a custom React Native Graph, and settled on building the graph natively with Swift and Kotlin to boost performance.\n\n I also integrated Firebase throughout the app to provide Analytics as well as researching and creating a helpful privacy dialog to allow users to choose whether or not to opt into the Analytics. Being a part of building this app was a wonderful experience that I really enjoyed and learned a lot from."
+  }
+  

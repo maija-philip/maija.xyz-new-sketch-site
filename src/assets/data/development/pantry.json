@@ -1,0 +1,13 @@
+{
+    "file-name": "pantry",
+    "title": "Pantry Recipe App",
+    "subtitle": "Mobile Developer - Flutter",
+    "image": "pantry",
+    "alt": "Pantry Flutter App, Store all your recipes, simple, and easily on multiple devices",
+    "links": [
+      { "title": "Github", "url": "https://github.com/maija-philip/PantryRecipeApp" },
+      { "title": "Design", "url": "/info/pantry-design" }
+    ],
+    "description": "2023 \n\n Pantry is my first complete Flutter app and the first complex app I have built. Flutter was part of my 2023 Foundations of Mobile Design class. After installing it, which I definitely struggled with, it was really enjoyable. \n\nI used the material 3 design library to design this recipe app so that it was minimal and easy to use with recognizable components. I really wanted user specific recipes, so I was dead set on integrating Firebase Authentication and Realtime Database. It was fantastic how well Firebase integrates with Flutter, the login and create account functionality was smooth sailing. It was a little hard to figure out how to call firebase the right way for add, edit, and delete functionality, though once I figured out one, the rest were easier. \n\nI also found it very difficult to debug in flutter, the errors didn't always throw, they caused breakpoints which I slowly started to get used to. The rest of the project went much smoother than I thought, given that this was my first big project with Flutter. I really enjoyed it and would happily use Flutter in the future."
+  }
+  

@@ -1,0 +1,14 @@
+{
+    "file-name": "raincoat",
+    "title": "Raincoat iOS + Android App",
+    "subtitle": "Mobile Developer",
+    "image": "raincoat",
+    "alt": "Raincoat App, Turn weather into something you can wear",
+    "links": [
+      { "title": "IOS Github", "url": "https://github.com/maija-philip/RaincoatWeatherAppIOS" },
+      { "title": "Android Github", "url": "https://github.com/maija-philip/RaincoatWeatherAppAndroid" },
+      { "title": "Design", "url": "/info/raincoat-design" }
+    ],
+    "description": "2023-2024 \n\nRaincoat was my final for both my 2023 Mobile Development for iOS and my 2024 Mobile Development for Android classes. It was really fun to get the chance to build an app twice in two different languages. \n\nDoing the app the second time in Kotlin, I set things up a bit differently and ended up liking the result way better than how I did it in Swift. In Kotlin, I used the view model to keep track of the user's preferences for this session and separated that with how the user's preferences were stored in the database. I combined the two in Swift using an @Model object which was slow to update and caused the app to lag. After I realized how much nicer an experience it was for the user on the Kotlin app because they were separated, I decided to implement that on the iOS one as well. \n\nI really enjoyed seeing the differences in the two languages and was surprised how easy it is to implement Maps and permissions with Swift, while in Kotlin those were more difficult. I enjoyed how easy it was to add dependencies and use outside libraries in Kotlin. Both languages were awesome to work in and I'd love to do more mobile development in the future."
+  }
+  

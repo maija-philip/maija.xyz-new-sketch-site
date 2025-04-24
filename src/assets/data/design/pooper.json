@@ -1,0 +1,12 @@
+{
+    "file-name": "pooper",
+    "title": "Pooper - Poop Tracking the Fun Way",
+    "subtitle": "UI/UX Designer + Graphic Designer",
+    "image": "pooper",
+    "alt": "poop figure with eyes along with several views of poop tracking statistics",
+    "links": [
+      { "title": "Github -> Partially Developed iOS App", "url": "https://github.com/maija-philip/Pooper" }
+    ],
+    "description": "2024 \n\nFor a while I was fascinated with the way your poop can reflect how healthy your digestive system is. There's a lot of information you can gain if you track it over time. With that being said, a lot of the apps available on the app store are not the type of aesthetically pleasing that I enjoy. \n\nI wanted to keep a lot of the cool features these apps had as well as regular habit trackers have and pair that with pleasing and cute visuals. That is what inspired me to create this little Pooper Guy. He's happy to help you with all your pooping needs. I wanted to highlight simple information on the homepage with a large and easy tracking button (or a quick add if you are running late) I also have the last 7 days of poop or has not pooped as well. \n\nWhen you log a poop there are a lot of options you can track, but you only need to fill out what is important to you. Whatever you decide to track will be reflected in the statistics page which shows the poops that happened today (or this week, still deciding), as well as some statistics. The more things you track the more statistics you will get. There is also a calendar view so you can see which days you pooped as well as the number of logs."
+  }
+  
