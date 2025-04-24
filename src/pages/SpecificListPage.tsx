@@ -1,14 +1,18 @@
 import * as React from "react";
+import BackButton from "../components/BackButton";
 
-interface IProps {
-  pageType: string,
+type PageType = "development" | "design" | "art";
+
+interface SpecificListPageProps {
+  pageType: PageType;
 }
 
-export default function SpecificListPage({pageType}) {
-  
+export default function SpecificListPage({ pageType }: SpecificListPageProps) {
   return (
     <div>
-        <h1>Homepage</h1>
+      <h1>Specific List Page</h1>
+      <p>Type: {pageType}</p>
+      <BackButton/>
     </div>
   );
 }
