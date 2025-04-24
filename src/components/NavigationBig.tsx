@@ -1,11 +1,19 @@
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavigationBig() {
-  const navigate = useNavigate();
 
-  // TODO
   return (
-    <div><a href="/">TODO</a></div>
+    <div className="navigation-big">
+      <div>
+        <a href="/">Maija Philip</a>
+      </div>
+      <div className="many-links-row">
+        <Link to="/development">Development</Link>
+        <Link to="/design">Design</Link>
+        <Link to="/art">Art</Link>
+        <a href="https://maija.xyz/Philip_Maija_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </div>
+    </div>
   );
 }

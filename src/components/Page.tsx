@@ -17,27 +17,26 @@ interface PageProps {
  * @returns nothing
  */
 export default function Page({ hasBackButton, children }: PageProps) {
-
-    let windowWidth = useWindowWidth()
+  let windowWidth = useWindowWidth();
 
   return (
-    <div className="page">
-      {/* Back Button and/or Navigation */}
+    <div className="max-width-page-boundary">
+      <div
+        className={windowWidth > MAX_WIDTH_MOBILE ? "page page-wide" : "page"}
+      >
+        {/* Back Button and/or Navigation */}
 
-        { windowWidth > MAX_WIDTH_MOBILE ? <NavigationBig/> : hasBackButton ? <><BackButton /><NavigationSmall isRight={true} /></> : <NavigationSmall isRight={false} />}
+        {windowWidth > MAX_WIDTH_MOBILE ? (
+          <NavigationBig />
+        ) : (
+          <NavigationSmall isRight={hasBackButton} />
+        )}
+        {hasBackButton && (
+          <BackButton isTop={windowWidth <= MAX_WIDTH_MOBILE} />
+        )}
 
-      {/* Content */}
-      <div className="content">{children}</div>
-
-      {/* Footer */}
-      <div className="footer">
-        <img
-          src={require("../assets/media/yellow-flowers.jpg")}
-          alt="field of yellow mustard flowers cropped into a circle"
-        />
-        <p>
-          Designed and Created by Maija Philip &copy; {new Date().getFullYear()}
-        </p>
+        {/* Content */}
+        <div className="content">{children}</div>
       </div>
     </div>
   );

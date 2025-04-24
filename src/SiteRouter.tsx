@@ -28,13 +28,29 @@ export const SiteRouter = () => {
     },
     {
       path: "/info/:item",
-      element: <InfoPage/>,
-    }
+      element: <InfoPage />,
+    },
   ]);
 
   return (
-    <RouterProvider router={router}>
-      <Homepage />
-    </RouterProvider>
+    <div>
+      <RouterProvider router={router}>
+        <Homepage />
+      </RouterProvider>
+
+      {/* 
+        Footer 
+        The footer is here so that when the content changes, the image doesn't have to reload every time
+        */}
+      <div className="footer">
+        <img
+          src={require("./assets/media/yellow-flowers.jpg")}
+          alt="field of yellow mustard flowers cropped into a circle"
+        />
+        <p>
+          Designed and Created by Maija Philip &copy; {new Date().getFullYear()}
+        </p>
+      </div>
+    </div>
   );
 };
