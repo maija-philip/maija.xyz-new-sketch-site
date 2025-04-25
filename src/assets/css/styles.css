@@ -8,8 +8,8 @@
   text-align: left;
 }
 .max-width-page-boundary {
-    max-width: 1115px;
-    margin: auto;
+  max-width: 1115px;
+  margin: auto;
 }
 
 .page-wide {
@@ -78,32 +78,92 @@ button:hover,
 
 /* NAVIGATION */
 .navigation-big {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.navigation-big a {
-    text-decoration: none;
-    color: var(--black);
+.navigation-big a,
+.nav-small-content a,
+.nav-small-content p {
+  text-decoration: none;
+  color: var(--black);
 }
 .many-links-row a {
-    margin-left: 1.5em;
+  margin-left: 1.5em;
 }
-.navigation-big a:hover {
-    text-decoration: underline;
+.navigation-big a:hover,
+.nav-small-content a:hover,
+.nav-small-content p:hover {
+  text-decoration: underline;
 }
 
 .nav-small {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    /* background-color: #F2F3F4F2; */
-    background-color: green;
+  background-color: #f2f3f4f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav-small-content {
 
+.nav-small-content a,
+.nav-small-content p {
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+  margin: 2em auto;
+}
+
+/* DEMO BOX */
+.demo-box {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.demo-box img {
+  width: 100%;
+  border-radius: 1.25em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.demo-box:hover img {
+  filter: brightness(0.7);
+}
+
+.demo-box h3 {
+  font-weight: normal;
+}
+
+/* TITLE BLOCK */
+h1.homepage {
+  font-size: 6em;
+}
+h2.homepage {
+  font-weight: normal;
+  font-size: 2em;
+  margin-top: -2em;
+}
+
+h1.homepage-mobile {
+  font-size: 18vw;
+}
+h2.homepage-mobile {
+  font-weight: normal;
+  font-size: 1.75em;
+  margin-top: -10vw;
+}
+header.homepage {
+  background: linear-gradient(
+    to right,
+    var(--white),
+    #f2f3f400
+  ); /* white to white with 0 opacity */
 }

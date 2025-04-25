@@ -1,16 +1,29 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface DemoBoxProps {
-  img: String;
-  alt: String;
-  title: String;
+  tag: string;
+  img: string;
+  alt: string;
+  title: string;
 }
 
-export default function DemoBox({img, alt, title} : DemoBoxProps) {
+export default function DemoBox({ tag, img, alt, title }: DemoBoxProps) {
+  const navigate = useNavigate();
 
   return (
-    <button onClick={() => {}} className="page-button"><ArrowBackIcon fontSize="large" /></button>
+    <div
+      className="demo-box"
+      onClick={() => {
+        navigate(`/info/${tag}`);
+      }}
+    >
+      <img
+        src={require(`../assets/media/development/${img}.png`)}
+        alt={alt}
+        unselectable="on"
+      />
+      <h3>{title}</h3>
+    </div>
   );
 }

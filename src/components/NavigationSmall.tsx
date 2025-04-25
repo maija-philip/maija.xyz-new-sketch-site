@@ -1,7 +1,7 @@
 import * as React from "react";
 import AppsIcon from "@mui/icons-material/Apps";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link } from "react-router-dom";
+import { To, useNavigate } from "react-router-dom";
 
 interface NavigationProps {
   isRight: Boolean;
@@ -9,6 +9,12 @@ interface NavigationProps {
 
 export default function NavigationSmall({ isRight }: NavigationProps) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const navigate = useNavigate();
+
+  const goTo = (location: To) => {
+    setIsOpen(false)
+    navigate(location)
+  }
 
   // TODO
   return (
@@ -30,17 +36,18 @@ export default function NavigationSmall({ isRight }: NavigationProps) {
           <div className="nav-small-content">
             {/* Close the Nav */}
             <button
+            className="page-button top-right"
               onClick={() => {
                 setIsOpen(false);
               }}
             >
-              <CloseIcon />
+              <CloseIcon fontSize="large"/>
             </button>
 
-            <Link to="/">Home</Link>
-            <Link to="/development">Development</Link>
-            <Link to="/design">Design</Link>
-            <Link to="/art">Art</Link>
+            <p onClick={() => {goTo("/")}}>Home</p>
+            <p onClick={() => {goTo("/development")}}>Development</p>
+            <p onClick={() => {goTo("/design")}}>Design</p>
+            <p onClick={() => {goTo("/art")}}>Art</p>
             <a
               href="https://maija.xyz/Philip_Maija_Resume.pdf"
               target="_blank"
