@@ -3,7 +3,7 @@
   margin: 2em;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 12em);
+  min-height: calc(100vh - 15em);
 
   text-align: left;
 }
@@ -192,4 +192,14 @@ header.homepage {
 .info-content a {
   display: block;
   color: var(--black);
+}
+
+/* SPECIFIC PAGE LIST */
+.specific-list-page h1 {
+  text-transform: capitalize;
+  font-size: 3em;
+}
+
+.specific-list-page .demo-box-home {
+  
 }

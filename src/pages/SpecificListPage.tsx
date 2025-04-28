@@ -10,9 +10,12 @@ interface SpecificListPageProps {
 export default function SpecificListPage({ pageType }: SpecificListPageProps) {
   return (
     <Page hasBackButton={true}>
-      <div>
-        <h1>Specific List Page</h1>
-        <p>Type: {pageType}</p>
+      <div className="specific-list-page">
+        <h1>{pageType}<br/>Projects</h1>
+
+        <div className="demo-box-home">
+          
+        </div>
       </div>
     </Page>
   );
