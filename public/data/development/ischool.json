@@ -2,6 +2,7 @@
     "file-name": "ischool",
     "title": "School of Information Replica Website",
     "subtitle": "Frontend Developer",
+    "color": "#AC5617",
     "image": "ischool",
     "alt": "School of Information Replica Website, Utilizes React and APIs",
     "links": [

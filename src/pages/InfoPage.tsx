@@ -3,19 +3,24 @@ import { useNavigate, useParams } from "react-router-dom";
 import Page from "../components/Page";
 import { CircularProgress } from "@mui/material";
 import getProjectInfo from "../utils/getProjectInfo";
+import useWindowWidth from "../utils/useWindowWidth";
+import { MAX_WIDTH_MOBILE } from "../utils/constants";
 
 export interface ItemDetails {
   "file-name": string;
-  img: string;
+  image: string;
+  folder: string;
   alt: string;
   title: string;
   subtitle: string;
+  color: string;
   links: [{ title: string; url: string }];
   description: string;
 }
 
 export default function InfoPage() {
   const navigate = useNavigate();
+  const windowWidth = useWindowWidth();
   const { item } = useParams();
   const [itemDetails, setItemDetails] = React.useState<ItemDetails | undefined>(
     undefined
@@ -33,7 +38,6 @@ export default function InfoPage() {
         setError("Something went wrong");
         return;
       }
-
       setItemDetails(projectInfo);
     });
   }, [item, navigate]);
@@ -46,10 +50,16 @@ export default function InfoPage() {
       ) : !itemDetails ? (
         <CircularProgress />
       ) : (
-        <div>
+        <div
+          className={
+            windowWidth < MAX_WIDTH_MOBILE
+              ? "info-content mobile"
+              : "info-content"
+          }
+        >
           {/* Big Image */}
           <img
-            src={require(`../assets/media/development/${itemDetails.img}-big.png`)}
+            src={require(`../assets/media/${itemDetails.folder}/${itemDetails.image}-big.png`)}
             alt={itemDetails.alt}
             unselectable="on"
           />
@@ -57,11 +67,22 @@ export default function InfoPage() {
           <h1>{itemDetails.title}</h1>
           <h2>{itemDetails.subtitle}</h2>
           {itemDetails.links.map((link, index) => {
-            return <a href={link.url}>{link.title}</a>;
+            return (
+              <a href={link.url} key={index} style={{color: itemDetails.color}}>
+                {link.title}
+              </a>
+            );
           })}
 
           {/* Description */}
-          <p>{itemDetails.description}</p>
+          <p>
+            {itemDetails.description.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
         </div>
       )}
     </Page>

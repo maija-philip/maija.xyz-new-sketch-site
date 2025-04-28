@@ -1,0 +1,13 @@
+{
+    "file-name": "RIT-GCCIS",
+    "title": "RIT GCCIS Diversity and Initiatives Active Membership Tracker",
+    "subtitle": "Full Stack Developer + Project Manager",
+    "color": "#F76902",
+    "image": "RIT-GCCIS",
+    "alt": "RIT Golisano College of Computing and Information Sciences Diversity Initiatives Office title with a welcome screen highlighting clubs COMS and WiC as well as some graphs and a calendar view.",
+    "links": [
+      { "title": "Github", "url": "https://github.com/maxstein16/active-membership-tracker" }
+    ],
+    "description": "2024-2025 \n\nThis was a year long project, the first semester was planning, the second semester was documentation. I was the project manager of a team of 6 other people as we created this Active Membership Tracker for my college's Diversity and Initiatives Office. \n\nDuring the first semester we planned out our requirements with our sponsor, as well as planning a schedule, hourly budget, and ER Diagram. This semester we followed a lot of Waterfall documentation practices. \n\nThe second semester kicked off development where we built from Database, to server, to backend, and then on to frontend. During this semester, we followed and Agile approach with weekly sprints and stand ups. As a group, we planned for everyone to work on every piece of this project even if it's not where they are particularly interested in. While every piece of the project pertained to everyone's major and so they had some experience, this created a weird dynamic where people everyone touched everything and it became disorderly fast. This is not a strategy I'd employ again. \n\nAs the project manager I got to work through a bunch of struggles and learning opportunities involving navigating with services like ITS and escalating to higher-ups when needed, facilitating constructive discussions on how we could do better in the future, running stand-ups, and more. \n\nAs we worked on this project, we got to see 3 other teams working on the same project and were able to learn from how and what they were doing differently. This really helped when we had our project retro at the end. Overall, it was a really enjoyable but also very challenging and time consuming project. Feel free to reach out to me if you have any questions."
+  }
+  

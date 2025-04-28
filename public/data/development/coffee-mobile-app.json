@@ -1,0 +1,13 @@
+{
+    "file-name": "coffee-mobile-app",
+    "title": "Coffee Mobile Web App",
+    "subtitle": "Frontend Developer - Plain HTML, CSS, and JS",
+    "color": "#3E0500",
+    "image": "coffee-mobile-app",
+    "alt": "three screens of the app UI, including the top and bottom of the ordering page as well as the checkout page.",
+    "links": [
+      { "title": "Github", "url": "https://github.com/maija-philip/CoffeeApp" }
+    ],
+    "description": "2023 \n\nI created this web app as a part of my 2023 Foundations of Mobile Design course. As a group assignment, we designed this coffee app then individually built it and adjusted the design. We decided to follow material design so that it was simple and easy to use. \n\nThe cart feature was built using local storage of complex javascript objects in order to capture all the information about the drink. As you add details about a drink, it builds out a temporary object that you can add to your cart. For the drink customization page, I created a custom selector where you can add and remove as many toppings as you'd like. \n\nThis was a really fun project and I really enjoyed figuring out how to store the drink data as they were selecting it, especially in the custom toppings selector where the user could add and then later remove a topping. I decided to store them as a string of comma separated toppings, which if I were doing it again, I would change to a list of objects that I could parse into a string later. The comma separated string list was a unique challenge, however, that I enjoyed figuring out."
+  }
+  

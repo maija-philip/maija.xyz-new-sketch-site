@@ -1,7 +1,8 @@
 {
     "file-name": "raincoat",
     "title": "Raincoat iOS + Android App",
-    "subtitle": "Mobile Developer",
+    "subtitle": "Mobile Developer - Swift & Kotlin",
+    "color": "#215CBA",
     "image": "raincoat",
     "alt": "Raincoat App, Turn weather into something you can wear",
     "links": [

@@ -5,6 +5,8 @@
     { "file": "pantry", "folder": "development" },
     { "file": "raincoat", "folder": "development" },
     { "file": "retire-plan", "folder": "development" },
+    { "file": "coffee-mobile-app", "folder": "development" },
+    { "file": "RIT-GCCIS", "folder": "development" },
     { "file": "connect4-design", "folder": "design" },
     { "file": "cow", "folder": "design" },
     { "file": "iOS-custom-app-icon", "folder": "design" },

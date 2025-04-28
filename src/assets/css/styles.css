@@ -34,6 +34,13 @@
   margin: auto;
   text-align: center;
 }
+.footer .links a {
+  color: var(--black);
+  margin: auto 0.5em;
+}
+.footer .links a:hover {
+  filter: brightness(5);
+}
 .page-button {
   /* background-color: var(--white); */
   display: block;
@@ -166,4 +173,23 @@ header.homepage {
     var(--white),
     #f2f3f400
   ); /* white to white with 0 opacity */
+}
+
+/* INFO PAGE CONTENT */
+.info-content img {
+  width: 100%;
+  border-radius: 1.25em;
+}
+.info-content h1 {
+  font-size: 3em;
+}
+.info-content h2 {
+  font-weight: normal;
+  margin-top: -1em;
+  font-size: 1.25em;
+}
+
+.info-content a {
+  display: block;
+  color: var(--black);
 }
