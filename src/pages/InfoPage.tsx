@@ -33,6 +33,8 @@ export default function InfoPage() {
       navigate("/");
       return;
     }
+
+    setError("");
     getProjectInfo(item).then((projectInfo) => {
       if (!projectInfo) {
         setError("Something went wrong");
