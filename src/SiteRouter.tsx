@@ -47,7 +47,7 @@ export const SiteRouter = () => {
         */}
       <div className="footer">
         <img
-          src={require("./assets/media/yellow-flowers.jpg")}
+          src={"/media/yellow-flowers.jpg"}
           alt="field of yellow mustard flowers cropped into a circle"
         />
         <p>

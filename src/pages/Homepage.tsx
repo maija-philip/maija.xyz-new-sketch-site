@@ -22,15 +22,22 @@ export default function Homepage() {
               <br />
               Philip
             </h1>
-            <h2 className="homepage-mobile">Full Stack Software<br/>Developer</h2>
+            <h2 className="homepage-mobile">
+              Full Stack Software
+              <br />
+              Developer
+            </h2>
           </header>
         )}
 
         <DemoBox
-          tag={"connect4"}
-          img={"connect4"}
-          alt={"alt here"}
-          title={"Full Stack Developer"}
+          project={{
+            tag: "connect4",
+            folder: "development",
+            image: "connect4",
+            alt: "bad alt",
+            subtitle: "maija",
+          }}
         />
       </>
     </Page>

@@ -61,7 +61,7 @@ export default function InfoPage() {
         >
           {/* Big Image */}
           <img
-            src={require(`../assets/media/${itemDetails.folder}/${itemDetails.image}-big.png`)}
+            src={`/media/${itemDetails.folder}/${itemDetails.image}-big.png`}
             alt={itemDetails.alt}
             unselectable="on"
           />

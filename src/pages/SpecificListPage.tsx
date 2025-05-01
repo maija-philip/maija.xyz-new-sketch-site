@@ -12,6 +12,7 @@ interface SpecificListPageProps {
 
 export interface Project {
   tag: string;
+  folder: string;
   image: string;
   alt: string;
   subtitle: string;
@@ -19,7 +20,7 @@ export interface Project {
 
 export default function SpecificListPage({ pageType }: SpecificListPageProps) {
   const [error, setError] = React.useState<string>("");
-  const [projects, setProjects] = React.useState<[Project] | [] | undefined>(
+  const [projects, setProjects] = React.useState<Project[] | undefined>(
     undefined
   );
 
@@ -27,13 +28,15 @@ export default function SpecificListPage({ pageType }: SpecificListPageProps) {
   React.useEffect(() => {
     setError("");
 
-    const projectsResult = getProjects(pageType);
-    if (!projectsResult) {
-      setError("Something went wrong fetching the projects");
-      return;
-    }
-
-    setProjects(projectsResult);
+    getProjects(pageType).then((projectsResult) => {
+      if (!projectsResult) {
+        setError("Something went wrong fetching the projects");
+        return;
+      }
+  
+      setProjects(projectsResult);
+    });
+    
   }, [pageType]);
 
   return (
@@ -53,12 +56,10 @@ export default function SpecificListPage({ pageType }: SpecificListPageProps) {
           <p>No Projects</p>
         ) : (
           <div className="demo-box-home">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <DemoBox
-                tag={project.tag}
-                img={project.image}
-                alt={project.alt}
-                title={project.subtitle}
+                key={index}
+                project={project}
               />
             ))}
           </div>

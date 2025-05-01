@@ -128,7 +128,7 @@ button:hover,
 
 /* DEMO BOX */
 .demo-box {
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   text-align: center;
   display: inline-block;
@@ -201,5 +201,5 @@ header.homepage {
 }
 
 .specific-list-page .demo-box-home {
-  
+
 }

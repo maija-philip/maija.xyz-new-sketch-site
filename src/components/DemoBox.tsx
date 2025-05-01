@@ -1,29 +1,27 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { Project } from "../pages/SpecificListPage";
 
 interface DemoBoxProps {
-  tag: string;
-  img: string;
-  alt: string;
-  title: string;
+  project: Project;
 }
 
-export default function DemoBox({ tag, img, alt, title }: DemoBoxProps) {
+export default function DemoBox({ project }: DemoBoxProps) {
   const navigate = useNavigate();
 
   return (
     <div
       className="demo-box"
       onClick={() => {
-        navigate(`/info/${tag}`);
+        navigate(`/info/${project.tag}`);
       }}
     >
       <img
-        src={require(`../assets/media/development/${img}.png`)}
-        alt={alt}
+        src={`/media/${project.folder}/${project.image}.png`}
+        alt={project.alt}
         unselectable="on"
       />
-      <h3>{title}</h3>
+      <h3>{project.subtitle}</h3>
     </div>
   );
 }
