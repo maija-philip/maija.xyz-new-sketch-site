@@ -19,7 +19,7 @@ export default function Homepage() {
     setError("");
 
     getHomepageProjects().then((projectsResult) => {
-      console.log("Project results: ", projectsResult)
+      console.log("Project results: ", projectsResult);
       if (!projectsResult) {
         setError("Something went wrong fetching the projects");
         return;
@@ -57,10 +57,30 @@ export default function Homepage() {
           <CircularProgress />
         ) : projects.length < 1 ? (
           <p>No Projects</p>
+        ) : windowWidth > MAX_WIDTH_MOBILE ? (
+          <div className="demo-box-home homepage-demo-boxes">
+            <div className="column">
+              {projects.map((project, index) => {
+                if (index % 2 === 0) {
+                  return <DemoBox key={index} project={project} />;
+                }
+                return <></>
+              })}
+            </div>
+            <div className="column">
+              <div className="offset-columns"></div>
+              {projects.map((project, index) => {
+                if (index % 2 === 1) {
+                  return <DemoBox key={index} project={project} />;
+                }
+                return <></>
+              })}
+            </div>
+          </div>
         ) : (
-          <div className="demo-box-home">
+          <div className="demo-box-home mobile-homepage">
             {projects.map((project, index) => (
-              <DemoBox key={index} project={project} />
+              <div className={index % 2 === 0 ? "left" : "right"}><DemoBox key={index} project={project} /></div>
             ))}
           </div>
         )}

@@ -21,7 +21,7 @@ body {
 * {
   box-sizing: border-box;
   transition: 0.1s;
-  cursor: url("/public/media/cursor.png"), auto;
+  /* cursor: url("/public/media/cursor.png"), auto; */
 }
 
 *,
