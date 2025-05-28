@@ -3,9 +3,31 @@ import Page from "../components/Page";
 import DemoBox from "../components/DemoBox";
 import useWindowWidth from "../utils/useWindowWidth";
 import { MAX_WIDTH_MOBILE } from "../utils/constants";
+import getHomepageProjects from "../utils/getHomepageProjects";
+import { Project } from "./SpecificListPage";
+import { CircularProgress } from "@mui/material";
 
 export default function Homepage() {
   const windowWidth = useWindowWidth();
+  const [error, setError] = React.useState<string>("");
+  const [projects, setProjects] = React.useState<Project[] | undefined>(
+    undefined
+  );
+
+  // get items
+  React.useEffect(() => {
+    setError("");
+
+    getHomepageProjects().then((projectsResult) => {
+      console.log("Project results: ", projectsResult)
+      if (!projectsResult) {
+        setError("Something went wrong fetching the projects");
+        return;
+      }
+
+      setProjects(projectsResult);
+    });
+  }, []);
 
   return (
     <Page hasBackButton={false}>
@@ -29,16 +51,19 @@ export default function Homepage() {
             </h2>
           </header>
         )}
-
-        <DemoBox
-          project={{
-            tag: "connect4",
-            folder: "development",
-            image: "connect4",
-            alt: "bad alt",
-            subtitle: "maija",
-          }}
-        />
+        {error !== "" ? (
+          <p>{error}</p>
+        ) : !projects ? (
+          <CircularProgress />
+        ) : projects.length < 1 ? (
+          <p>No Projects</p>
+        ) : (
+          <div className="demo-box-home">
+            {projects.map((project, index) => (
+              <DemoBox key={index} project={project} />
+            ))}
+          </div>
+        )}
       </>
     </Page>
   );
