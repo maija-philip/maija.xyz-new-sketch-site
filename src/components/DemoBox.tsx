@@ -4,9 +4,10 @@ import { Project } from "../pages/SpecificListPage";
 
 interface DemoBoxProps {
   project: Project;
+  img?: string;
 }
 
-export default function DemoBox({ project }: DemoBoxProps) {
+export default function DemoBox({ project, img }: DemoBoxProps) {
   const navigate = useNavigate();
 
   return (
@@ -16,6 +17,7 @@ export default function DemoBox({ project }: DemoBoxProps) {
         navigate(`/info/${project.tag}`);
       }}
     >
+      {img ?? <></> /* put image here that should follow the box */}
       <img
         src={`/media/${project.folder}/${project.image}.png`}
         alt={project.alt}

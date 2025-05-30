@@ -116,6 +116,7 @@ button:hover,
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .nav-small-content a,
@@ -134,6 +135,7 @@ button:hover,
   justify-content: center; /* optional: keeps content centered */
   margin: 0 auto;    /* center the container itself */
   text-align: center;
+  z-index: 2;
 }
 
 .demo-box {
@@ -176,13 +178,6 @@ h2.homepage-mobile {
   font-weight: normal;
   font-size: 1.75em;
   margin-top: -10vw;
-}
-header.homepage {
-  background: linear-gradient(
-    to right,
-    var(--white),
-    #f2f3f400
-  ); /* white to white with 0 opacity */
 }
 
 /* INFO PAGE CONTENT */
@@ -244,4 +239,35 @@ header.homepage {
 }
 .mobile-homepage .right .demo-box h3 {
   margin: auto 3em;
+}
+
+/* SKETCHES */
+header {
+ position: relative;
+}
+header .sketch {
+  width: 50vw;
+  max-width: 500px;
+  position: absolute;
+  right: -1em;
+  top: -4.5em;
+  z-index: 1;
+}
+
+header.mobile .sketch {
+  top: -1.5em;
+}
+header.mobile-extra .sketch {
+  top: 6em;
+}
+
+header div {
+ background-image: linear-gradient(to right, var(--white), #f2f3f400); /* white to white no opacity */ 
+}
+
+header.specific-list div {
+  margin-bottom: 10em;
+}
+.demo-box-home {
+  position: relative;
 }

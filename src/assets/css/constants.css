@@ -1,6 +1,6 @@
 :root {
-  --white: #F2F3F4;
-  --black: #261E08;
+  --white: #f2f3f4;
+  --black: #261e08;
 }
 
 html,
@@ -28,4 +28,11 @@ body {
 *:after,
 *:before {
   box-sizing: border-box;
+}
+
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
