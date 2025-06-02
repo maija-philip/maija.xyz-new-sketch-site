@@ -133,12 +133,13 @@ button:hover,
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1em 3em;
   justify-content: center; /* optional: keeps content centered */
-  margin: 0 auto;    /* center the container itself */
+  margin: 0 auto; /* center the container itself */
   text-align: center;
   z-index: 2;
 }
 
 .demo-box {
+  position: relative;
   margin: auto;
   text-align: center;
   max-width: 300px;
@@ -147,10 +148,12 @@ button:hover,
 }
 
 .demo-box img {
+  position: relative;
   width: 100%;
   border-radius: 1.25em;
   pointer-events: none;
   user-select: none;
+  z-index: 2;
 }
 
 .demo-box:hover img {
@@ -208,9 +211,9 @@ h2.homepage-mobile {
 
 /* HOMEPAGE BOX LAYOUT */
 .homepage-demo-boxes {
-  margin-top: 10em;
+  margin-top: 15em;
   grid-template-columns: 1fr 1fr;
-  justify-content:space-around
+  justify-content: space-around;
 }
 
 .homepage-demo-boxes .offset-columns {
@@ -218,21 +221,39 @@ h2.homepage-mobile {
 }
 
 .homepage-demo-boxes .demo-box {
-  margin-bottom: 5em;
+  margin-bottom: 20em;
 }
-
 .mobile-homepage {
-  margin-top: 6em;
+  margin: 10em 0 0 -2em;
+  grid-template-columns: 1fr;
+  width: 100vw;
+}
+.mobile-homepage.wide, .mobile-homepage.big {
+  margin-left: -4em;
 }
 .mobile-homepage .demo-box {
   width: 300px;
   margin-bottom: 5em;
 }
 .mobile-homepage .left {
-  margin-left: 30vw;
+  /* margin-left: 30vw; */
+  position: relative;
+  right: -20vw;
 }
 .mobile-homepage .right {
-  margin-left: -40vw;
+  /* margin-left: -30vw; */
+  position: relative;
+  left: -20vw;
+}
+.mobile-homepage.weird .left {
+  /* margin-left: 30vw; */
+  position: relative;
+  right: -30vw;
+}
+.mobile-homepage.weird .right {
+  /* margin-left: -30vw; */
+  position: relative;
+  left: -30vw;
 }
 .mobile-homepage .left .demo-box h3 {
   margin: auto 3em;
@@ -241,9 +262,15 @@ h2.homepage-mobile {
   margin: auto 3em;
 }
 
+.demo-box-home.mobile-homepage.big .left {
+  right: -15vw;
+}
+.demo-box-home.mobile-homepage.big .right {
+  left: -15vw;
+}
 /* SKETCHES */
 header {
- position: relative;
+  position: relative;
 }
 header .sketch {
   width: 50vw;
@@ -262,7 +289,11 @@ header.mobile-extra .sketch {
 }
 
 header div {
- background-image: linear-gradient(to right, var(--white), #f2f3f400); /* white to white no opacity */ 
+  background-image: linear-gradient(
+    to right,
+    var(--white),
+    #f2f3f400
+  ); /* white to white no opacity */
 }
 
 header.specific-list div {
@@ -270,4 +301,24 @@ header.specific-list div {
 }
 .demo-box-home {
   position: relative;
+}
+
+/* SKETCHES LEFT AND RIGHT ON HOMEPAGE */
+.demo-box-extra-img.left {
+  border-radius: 0;
+  position: absolute !important;
+  width: 50%;
+  left: -35% !important;
+  right: auto !important;
+  top: -25%;
+  z-index: 1;
+}
+.demo-box-extra-img.right {
+  border-radius: 0;
+  position: absolute !important;
+  width: 50%;
+  right: -35% !important;
+  left: auto !important;
+  top: -25%;
+  z-index: 1;
 }

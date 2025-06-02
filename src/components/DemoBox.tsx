@@ -4,10 +4,16 @@ import { Project } from "../pages/SpecificListPage";
 
 interface DemoBoxProps {
   project: Project;
-  img?: string;
+  extras?: HomePageDemoBoxExtras;
 }
 
-export default function DemoBox({ project, img }: DemoBoxProps) {
+interface HomePageDemoBoxExtras {
+  img: string;
+  imgAlt: string;
+  classes: string
+}
+
+export default function DemoBox({ project, extras }: DemoBoxProps) {
   const navigate = useNavigate();
 
   return (
@@ -17,7 +23,7 @@ export default function DemoBox({ project, img }: DemoBoxProps) {
         navigate(`/info/${project.tag}`);
       }}
     >
-      {img ?? <></> /* put image here that should follow the box */}
+      {extras && <img src={require(`../assets/sketches/${extras.img}`)} alt={extras.imgAlt} className={`demo-box-extra-img ${extras.classes}`}/>}
       <img
         src={`/media/${project.folder}/${project.image}.png`}
         alt={project.alt}

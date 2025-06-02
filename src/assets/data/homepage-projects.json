@@ -8,5 +8,25 @@
         "iOS-custom-app-icon", 
         "koi-fish",
         "paint-chips"
+    ],
+    "images": [
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG",
+        "detailed-horse.PNG"
+    ],
+    "imageAlts": [
+        "img",
+        "img",
+        "img",
+        "img",
+        "img",
+        "img",
+        "img",
+        "img"
     ]
 }

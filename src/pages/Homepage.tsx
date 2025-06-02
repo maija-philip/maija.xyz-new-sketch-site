@@ -6,7 +6,7 @@ import { MAX_WIDTH_MOBILE, MAX_WIDTH_TABLET } from "../utils/constants";
 import getHomepageProjects from "../utils/getHomepageProjects";
 import { Project } from "./SpecificListPage";
 import { CircularProgress } from "@mui/material";
-// import redLady from "../assets/sketches/red-lady.PNG"
+import homepageProjects from "../assets/data/homepage-projects.json";
 
 export default function Homepage() {
   const windowWidth = useWindowWidth();
@@ -20,7 +20,6 @@ export default function Homepage() {
     setError("");
 
     getHomepageProjects().then((projectsResult) => {
-      console.log("Project results: ", projectsResult);
       if (!projectsResult) {
         setError("Something went wrong fetching the projects");
         return;
@@ -33,8 +32,10 @@ export default function Homepage() {
   return (
     <Page hasBackButton={false}>
       <>
+        {/* For the header, my name needs to be bigger and split in half for mobile */}
         {windowWidth > MAX_WIDTH_TABLET ? (
           <header className="homepage">
+            {/* DESKTOP HEADER */}
             <img
               src={require("../assets/sketches/red-lady.PNG")}
               alt="sketch of a wavy haired woman"
@@ -47,6 +48,7 @@ export default function Homepage() {
           </header>
         ) : (
           <header className="homepage mobile">
+            {/* MOBILE HEADER */}
             <img
               src={require("../assets/sketches/red-lady.PNG")}
               alt="sketch of a wavy haired woman"
@@ -66,20 +68,23 @@ export default function Homepage() {
             </div>
           </header>
         )}
+
+        {/* If there is an error, or no projects, display that nicely without a react error */}
         {error !== "" ? (
           <p>{error}</p>
         ) : !projects ? (
           <CircularProgress />
         ) : projects.length < 1 ? (
-          <p>No Projects</p>
-        ) : windowWidth > MAX_WIDTH_MOBILE ? (
+          <>
+            <p>No Projects</p>
+
+            {/* The projects need to be laid out differently based on the width of the window */}
+          </>
+        ) : windowWidth > 960 ? (
           <div className="demo-box-home homepage-demo-boxes">
+            {/* Desktop Project View */}
             <div className="column">
-              {windowWidth <= MAX_WIDTH_TABLET ? (
-                <div className="offset-columns"></div>
-              ) : (
-                <></>
-              )}
+              {/* Map the even projects to the left */}
               {projects.map((project, index) => {
                 if (index % 2 === 0) {
                   return <DemoBox key={index} project={project} />;
@@ -88,11 +93,8 @@ export default function Homepage() {
               })}
             </div>
             <div className="column">
-              {windowWidth > MAX_WIDTH_TABLET ? (
-                <div className="offset-columns"></div>
-              ) : (
-                <></>
-              )}
+              {/* Map the odd projects with an offset at the top to the right */}
+              <div className="offset-columns"></div>
               {projects.map((project, index) => {
                 if (index % 2 === 1) {
                   return <DemoBox key={index} project={project} />;
@@ -102,12 +104,35 @@ export default function Homepage() {
             </div>
           </div>
         ) : (
-          <div className="demo-box-home mobile-homepage">
-            {projects.map((project, index) => (
-              <div className={index % 2 === 0 ? "left" : "right"}>
-                <DemoBox key={index} project={project} />
-              </div>
-            ))}
+          <div
+            className={
+              windowWidth >= 440 && windowWidth <= MAX_WIDTH_MOBILE
+                ? "demo-box-home mobile-homepage weird"
+                : windowWidth > MAX_WIDTH_TABLET
+                ? "demo-box-home mobile-homepage big"
+                : windowWidth > MAX_WIDTH_MOBILE
+                ? "demo-box-home mobile-homepage wide"
+                : "demo-box-home mobile-homepage"
+            }
+          >
+            {/* Mobile Project View */}
+            {projects.map((project, index) => {
+              let side = index % 2 === 0 ? "left" : "right";
+
+              return (
+                <div className={index % 2 === 0 ? "right" : "left"}>
+                  <DemoBox
+                    key={index}
+                    project={project}
+                    extras={{
+                      img: homepageProjects.images[index],
+                      imgAlt: homepageProjects.imageAlts[index],
+                      classes: side,
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
       </>
