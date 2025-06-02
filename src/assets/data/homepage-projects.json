@@ -1,32 +1,32 @@
 {
-    "names": [
-        "raincoat",
-        "connect4",
-        "pooper",
-        "retire-plan",
-        "cool",
-        "iOS-custom-app-icon", 
-        "koi-fish",
-        "paint-chips"
-    ],
-    "images": [
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG",
-        "detailed-horse.PNG"
-    ],
-    "imageAlts": [
-        "img",
-        "img",
-        "img",
-        "img",
-        "img",
-        "img",
-        "img",
-        "img"
-    ]
+  "names": [
+    "raincoat",
+    "connect4",
+    "pooper",
+    "retire-plan",
+    "cool",
+    "iOS-custom-app-icon",
+    "koi-fish",
+    "paint-chips"
+  ],
+  "images": [
+    "detailed-horse.PNG",
+    "fish-lady.PNG",
+    "landing-horse.PNG",
+    "queen.PNG",
+    "necklace-lady.PNG",
+    "potato-head.png",
+    "gymnasts.PNG",
+    "lots-sketches-hug.PNG"
+  ],
+  "imageAlts": [
+    "detailed sketch of a horse head and bust",
+    "woman with shoulder length hair looking up to the left",
+    "horse and rider landing from a jump and looking towards the next",
+    "woman with shoulder length hair looking straight forward",
+    "woman with long hair in a bun, leaning her neck out at the viewer",
+    "woman slouching in chair with a potato for a head",
+    "6 figures doing gymnastics poses",
+    "img"
+  ]
 }

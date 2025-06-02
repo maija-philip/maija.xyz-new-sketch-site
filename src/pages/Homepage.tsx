@@ -87,17 +87,25 @@ export default function Homepage() {
               {/* Map the even projects to the left */}
               {projects.map((project, index) => {
                 if (index % 2 === 0) {
-                  return <DemoBox key={index} project={project} />;
+                  return <DemoBox key={index} project={project} extras={{
+                      img: homepageProjects.images[index],
+                      imgAlt: homepageProjects.imageAlts[index],
+                      classes: "left",
+                    }} />;
                 }
                 return <></>;
               })}
             </div>
-            <div className="column">
+            <div className="column" style={{marginBottom: '-10em'}}>
               {/* Map the odd projects with an offset at the top to the right */}
               <div className="offset-columns"></div>
               {projects.map((project, index) => {
                 if (index % 2 === 1) {
-                  return <DemoBox key={index} project={project} />;
+                  return <DemoBox key={index} project={project} extras={{
+                      img: homepageProjects.images[index],
+                      imgAlt: homepageProjects.imageAlts[index],
+                      classes: "right",
+                    }}/>;
                 }
                 return <></>;
               })}
@@ -117,17 +125,23 @@ export default function Homepage() {
           >
             {/* Mobile Project View */}
             {projects.map((project, index) => {
-              let side = index % 2 === 0 ? "left" : "right";
+              let imgSide = index % 2 === 0 ? "left small" : "right small";
+              let pageSide = index % 2 === 0 ? "left small" : "right small";
+
+              if (windowWidth > MAX_WIDTH_TABLET) {
+                imgSide = index % 2 === 0 ? "left" : "right";
+                pageSide = index % 2 === 0 ? "right" : "left" ;
+              } 
 
               return (
-                <div className={index % 2 === 0 ? "right" : "left"}>
+                <div className={pageSide}>
                   <DemoBox
                     key={index}
                     project={project}
                     extras={{
                       img: homepageProjects.images[index],
                       imgAlt: homepageProjects.imageAlts[index],
-                      classes: side,
+                      classes: imgSide,
                     }}
                   />
                 </div>

@@ -322,3 +322,16 @@ header.specific-list div {
   top: -25%;
   z-index: 1;
 }
+
+.demo-box-extra-img.left.small {
+  width: 75%;
+  left: -60% !important;
+  right: auto !important;
+  top: -25%;
+}
+.demo-box-extra-img.right.small {
+  width: 75%;
+  right: -60% !important;
+  left: auto !important;
+  top: -25%;
+}
