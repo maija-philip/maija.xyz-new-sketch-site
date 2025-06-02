@@ -9,6 +9,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import Homepage from "./pages/Homepage";
 import SpecificListPage from "./pages/SpecificListPage";
 import InfoPage from "./pages/InfoPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export const SiteRouter = () => {
   // all the pages you can navigate to
@@ -32,6 +33,10 @@ export const SiteRouter = () => {
     {
       path: "/info/:item",
       element: <InfoPage />,
+    },
+    {
+      path: "*",
+      element: <NotFoundPage />,
     },
   ]);
 
